@@ -1,6 +1,3 @@
-Here's a **navigation structure** for your **Bike Showroom Management System**, outlining the main sections and pages users will interact with.  
-
----
 
 # **🚀 Navigation Structure for Bike Showroom Management System**  
 
