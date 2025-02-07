@@ -77,4 +77,4 @@ For any queries, feel free to reach out at `your-email@example.com`.
 
 ## image
 ![design](./demo.png)
-<img src="./demo.png"/>
+<img src="./demo2.png"/>
