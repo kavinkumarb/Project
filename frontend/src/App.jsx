@@ -1,39 +1,31 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Bikes from "./pages/Bikes";
-import Accessories from "./pages/Accessories";
-import Services from "./pages/Services";
-import Customers from "./pages/Customers";
-import UpcomingBikes from "./pages/UpcomingBikes";
-import BikeDetails from "./pages/BikeDetails";
-import PurchasedBikes from "./pages/PurchasedBikes";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import { useState } from "react";
 import "./App.css";
-import mongoose from "mongoose";
+import NavBar from "./components/NavBar";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import SearchPage from "./pages/SearchPage";
+import ProfilePage from "./pages/ProfilePage";
 
-mongoose.connect("mongodb://localhost:27017/bikeshowroom", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
 
 function App() {
+  const [activePageIndex, setActivePageIndex] = useState(0);
+
+  const NAVBAR_ITEMS = [
+    { icon: "🏠", text: "home", component: <HomePage /> },
+    { icon: "🖼️", text: "About", component: <AboutPage /> },
+    { icon: "🔍", text: "search", component: <SearchPage /> },
+    { icon: "🤦", text: "Profile", component: <ProfilePage /> },
+  ];
+
+  const activePage = NAVBAR_ITEMS[activePageIndex].component;
+
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/bikes" element={<Bikes />} />
-        <Route path="/accessories" element={<Accessories />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/customers" element={<Customers />} />
-        <Route path="/upcoming-bikes" element={<UpcomingBikes />} />
-        <Route path="/bike-details/:id" element={<BikeDetails />} />
-        <Route path="/purchased-bikes" element={<PurchasedBikes />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <div className="app">
+      <NavBar ITEMS={NAVBAR_ITEMS} setActivePageIndex={setActivePageIndex} />
+      <div className="main-container">
+        {activePage}
+      </div>
+    </div>
   );
 }
 
