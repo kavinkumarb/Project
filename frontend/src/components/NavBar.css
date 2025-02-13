@@ -1,0 +1,92 @@
+/* NAVIGATION BAR CONTAINER */
+.nav-bar-container {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 2500px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(103, 110, 110, 0.5);
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+/* NAVIGATION BAR */
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+/* NAVIGATION ITEMS */
+.nav-bar .item {
+    position: relative;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255); /* Neon Cyan */
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* Hover Effect - Neon Glow */
+.nav-bar .item::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #ffffff, rgb(255, 255, 255));
+    transition: all 0.4s ease-in-out;
+    transform: translateX(-50%);
+}
+
+/* Hover Animation */
+.nav-bar .item:hover {
+    color: #fff;
+    text-shadow: 0 0 10px rgb(120, 138, 138), 0 0 20px rgb(134, 149, 149);
+}
+
+/* Expand Underline on Hover */
+.nav-bar .item:hover::before {
+    width: 100%;
+}
+
+/* ACTIVE ITEM */
+.nav-bar .active {
+    color: #fff;
+    text-shadow: 0 0 10px rgb(99, 112, 112), 0 0 20px rgb(142, 157, 157);
+}
+
+.nav-bar .active::before {
+    width: 100%;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+    .nav-bar-container {
+        width: 95%;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .nav-bar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-bar .item {
+        width: 100%;
+        text-align: center;
+    }
+}
