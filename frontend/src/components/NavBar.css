@@ -10,7 +10,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(48, 185, 240, 0.8);
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(103, 110, 110, 0.5);
     z-index: 1000;
