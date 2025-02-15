@@ -1,0 +1,99 @@
+.about-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Showroom Info */
+.showroom-info {
+    background: linear-gradient(120deg, #ff5722, #ff9800);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.showroom-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+/* Customer Feedback */
+.feedback-section {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    border-color: black;
+    margin-bottom: 20px;
+}
+.reviews {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.review-card {
+    background: rgb(0, 0, 0);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 280px;
+}
+.review-name {
+    font-weight: bold;
+}
+.review-rating {
+    color: gold;
+}
+
+/* Feedback Form */
+.feedback-form {
+    background: rgb(0, 0, 0);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px auto;
+}
+.feedback-form h3 {
+    margin-bottom: 10px;
+}
+.feedback-section h2{
+    color: black;
+}
+.feedback-form input,
+.feedback-form select,
+.feedback-form textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.feedback-form button {
+    background: #ff5722;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+}
+.feedback-form button:hover {
+    background: #e64a19;
+}
+
+/* Showroom Locations */
+.location-section {
+    background: #2c3e50;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+.map-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 15px;
+}
